@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { 
   ChevronDown, 
@@ -39,8 +38,8 @@ const Navbar = () => {
             {/* Logo and Desktop Navigation */}
             <div className="flex items-center">
               <a href="/" className="mr-6">
-                <span className="text-xl font-bold uppercase tracking-wider">VIALTO</span>
-                <span className="ml-1 text-sm font-light">PARTNERS</span>
+                <span className="text-xl font-bold uppercase tracking-wider">ABC</span>
+                <span className="ml-1 text-sm font-light">COMPANY</span>
               </a>
               
               <div className="mr-4 hidden md:block">
@@ -168,7 +167,7 @@ const Navbar = () => {
                   )}
                 </div>
                 <div 
-                  className="relative static"
+                  className="relative"
                   onMouseEnter={() => handleMouseEnter('services')}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -183,7 +182,7 @@ const Navbar = () => {
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                   {activeDropdown === 'services' && (
-                    <div className="absolute left-0 right-0 mt-1 bg-[#121212] shadow-lg border border-gray-800" style={{ width: '100vw', transform: 'translateX(calc(-50vw + 50%))' }}>
+                    <div className="absolute left-0 right-0 mt-1 bg-[#121212] shadow-lg border border-gray-800 w-screen" style={{ left: '50%', transform: 'translateX(-50%)', maxWidth: '100vw' }}>
                       <div className="container mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
                           <div>
