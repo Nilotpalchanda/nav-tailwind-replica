@@ -22,7 +22,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 z-50 bg-[#121212] overflow-y-auto md:hidden">
       <div className="p-4 border-b border-gray-800">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-xl font-bold text-white">VIALTO</a>
+          <a href="/" className="text-xl font-bold text-white">ABC COMPANY</a>
           <button
             onClick={onClose}
             className="rounded-md p-2 text-gray-400 hover:text-white"
