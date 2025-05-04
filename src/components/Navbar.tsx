@@ -182,7 +182,7 @@ const Navbar = () => {
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                   {activeDropdown === 'services' && (
-                    <div className="absolute left-0 right-0 mt-1 bg-[#121212] shadow-lg border border-gray-800 w-screen" style={{ left: '50%', transform: 'translateX(-50%)', maxWidth: '100vw' }}>
+                    <div className="fixed left-0 mt-1 bg-[#121212] shadow-lg border border-gray-800 w-full" style={{ top: '64px' }}>
                       <div className="container mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
                           <div>
