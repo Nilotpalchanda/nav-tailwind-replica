@@ -168,7 +168,7 @@ const Navbar = () => {
                   )}
                 </div>
                 <div 
-                  className="relative"
+                  className="relative static"
                   onMouseEnter={() => handleMouseEnter('services')}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -183,81 +183,83 @@ const Navbar = () => {
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                   {activeDropdown === 'services' && (
-                    <div className="absolute left-0 mt-1 w-screen max-w-7xl -translate-x-1/3 bg-[#121212] shadow-lg border border-gray-800">
-                      <div className="grid grid-cols-3 gap-8 p-6">
-                        <div>
-                          <div className="mb-3 text-gray-400 text-xs uppercase">Compensation and Equity</div>
-                          <ul className="space-y-4">
-                            <li className="flex items-center">
-                              <ServiceIcons.TotalComp className="h-6 w-6 mr-3 text-teal-500" />
-                              <a href="#" className="block hover:text-blue-400">Total Comp</a>
-                              <span className="ml-2 text-gray-400">&#8599;</span>
-                            </li>
-                            <li className="flex items-center">
-                              <ServiceIcons.ShareTax className="h-6 w-6 mr-3 text-teal-500" />
-                              <a href="#" className="block hover:text-blue-400">ShareTax</a>
-                              <span className="ml-2 text-gray-400">&#8599;</span>
-                            </li>
-                            <li className="flex items-center">
-                              <ServiceIcons.GCM className="h-6 w-6 mr-3 text-teal-500" />
-                              <a href="#" className="block hover:text-blue-400">GCM</a>
-                              <span className="ml-2 text-gray-400">&#8599;</span>
-                            </li>
-                          </ul>
+                    <div className="absolute left-0 right-0 mt-1 bg-[#121212] shadow-lg border border-gray-800" style={{ width: '100vw', transform: 'translateX(calc(-50vw + 50%))' }}>
+                      <div className="container mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
+                          <div>
+                            <div className="mb-3 text-gray-400 text-xs uppercase">Compensation and Equity</div>
+                            <ul className="space-y-4">
+                              <li className="flex items-center">
+                                <ServiceIcons.TotalComp className="h-6 w-6 mr-3 text-teal-500" />
+                                <a href="#" className="block hover:text-blue-400">Total Comp</a>
+                                <span className="ml-2 text-gray-400">&#8599;</span>
+                              </li>
+                              <li className="flex items-center">
+                                <ServiceIcons.ShareTax className="h-6 w-6 mr-3 text-teal-500" />
+                                <a href="#" className="block hover:text-blue-400">ShareTax</a>
+                                <span className="ml-2 text-gray-400">&#8599;</span>
+                              </li>
+                              <li className="flex items-center">
+                                <ServiceIcons.GCM className="h-6 w-6 mr-3 text-teal-500" />
+                                <a href="#" className="block hover:text-blue-400">GCM</a>
+                                <span className="ml-2 text-gray-400">&#8599;</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <div className="mb-3 text-gray-400 text-xs uppercase">Dynamic Work</div>
+                            <ul className="space-y-4">
+                              <li className="flex items-center">
+                                <ServiceIcons.MyTripsAdmin className="h-6 w-6 mr-3 text-teal-500" />
+                                <a href="#" className="block hover:text-blue-400">myTrips Admin</a>
+                                <span className="ml-2 text-gray-400">&#8599;</span>
+                              </li>
+                              <li className="flex items-center">
+                                <ServiceIcons.TravelWatchAdmin className="h-6 w-6 mr-3 text-teal-500" />
+                                <a href="#" className="block hover:text-blue-400">TravelWatch Admin</a>
+                                <span className="ml-2 text-gray-400">&#8599;</span>
+                              </li>
+                              <li className="flex items-center">
+                                <ServiceIcons.RemoteWork className="h-6 w-6 mr-3 text-teal-500" />
+                                <a href="#" className="block hover:text-blue-400">Remote Work</a>
+                                <span className="ml-2 text-gray-400">&#8599;</span>
+                              </li>
+                            </ul>
+                            <div className="mt-6 mb-3 text-gray-400 text-xs uppercase">Social Security</div>
+                            <ul className="space-y-4">
+                              <li className="flex items-center">
+                                <ServiceIcons.GSS className="h-6 w-6 mr-3 text-teal-500" />
+                                <a href="#" className="block hover:text-blue-400">GSS</a>
+                                <span className="ml-2 text-gray-400">&#8599;</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <div className="mb-3 text-gray-400 text-xs uppercase">Managed Services</div>
+                            <ul className="space-y-4">
+                              <li className="flex items-center">
+                                <ServiceIcons.Care className="h-6 w-6 mr-3 text-teal-500" />
+                                <a href="#" className="block hover:text-blue-400">Care</a>
+                                <span className="ml-2 text-gray-400">&#8599;</span>
+                              </li>
+                              <li className="flex items-center">
+                                <ServiceIcons.VerifiedWithEquus className="h-6 w-6 mr-3 text-teal-500" />
+                                <a href="#" className="block hover:text-blue-400">'Verified' with Equus</a>
+                                <span className="ml-2 text-gray-400">&#8599;</span>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
-                        <div>
-                          <div className="mb-3 text-gray-400 text-xs uppercase">Dynamic Work</div>
-                          <ul className="space-y-4">
-                            <li className="flex items-center">
-                              <ServiceIcons.MyTripsAdmin className="h-6 w-6 mr-3 text-teal-500" />
-                              <a href="#" className="block hover:text-blue-400">myTrips Admin</a>
-                              <span className="ml-2 text-gray-400">&#8599;</span>
-                            </li>
-                            <li className="flex items-center">
-                              <ServiceIcons.TravelWatchAdmin className="h-6 w-6 mr-3 text-teal-500" />
-                              <a href="#" className="block hover:text-blue-400">TravelWatch Admin</a>
-                              <span className="ml-2 text-gray-400">&#8599;</span>
-                            </li>
-                            <li className="flex items-center">
-                              <ServiceIcons.RemoteWork className="h-6 w-6 mr-3 text-teal-500" />
-                              <a href="#" className="block hover:text-blue-400">Remote Work</a>
-                              <span className="ml-2 text-gray-400">&#8599;</span>
-                            </li>
-                          </ul>
-                          <div className="mt-6 mb-3 text-gray-400 text-xs uppercase">Social Security</div>
-                          <ul className="space-y-4">
-                            <li className="flex items-center">
-                              <ServiceIcons.GSS className="h-6 w-6 mr-3 text-teal-500" />
-                              <a href="#" className="block hover:text-blue-400">GSS</a>
-                              <span className="ml-2 text-gray-400">&#8599;</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <div className="mb-3 text-gray-400 text-xs uppercase">Managed Services</div>
-                          <ul className="space-y-4">
-                            <li className="flex items-center">
-                              <ServiceIcons.Care className="h-6 w-6 mr-3 text-teal-500" />
-                              <a href="#" className="block hover:text-blue-400">Care</a>
-                              <span className="ml-2 text-gray-400">&#8599;</span>
-                            </li>
-                            <li className="flex items-center">
-                              <ServiceIcons.VerifiedWithEquus className="h-6 w-6 mr-3 text-teal-500" />
-                              <a href="#" className="block hover:text-blue-400">'Verified' with Equus</a>
-                              <span className="ml-2 text-gray-400">&#8599;</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="bg-[#1a1a1a] px-6 py-4">
-                        <div className="text-xs">Your saved interests:</div>
-                        <div className="mt-2 flex flex-wrap gap-2">
-                          <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Thought leadership</span>
-                          <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Business travel</span>
-                          <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Cross border</span>
-                          <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Remote work</span>
-                          <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Permanent transfer</span>
-                          <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Relocation</span>
+                        <div className="bg-[#1a1a1a] px-6 py-4">
+                          <div className="text-xs">Your saved interests:</div>
+                          <div className="mt-2 flex flex-wrap gap-2">
+                            <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Thought leadership</span>
+                            <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Business travel</span>
+                            <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Cross border</span>
+                            <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Remote work</span>
+                            <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Permanent transfer</span>
+                            <span className="rounded-full bg-gray-800 px-3 py-1 text-xs">Relocation</span>
+                          </div>
                         </div>
                       </div>
                     </div>
